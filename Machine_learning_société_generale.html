@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    </script>
+    <STYLE>
+    .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: rgb(52, 26, 198);
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color: rgb(52, 26, 198);
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);   /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        background-color: rgb(98, 0, 255);
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 100%);
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .wrapper section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+    }
+    .wrapper section .item {
+        padding: 0 2px;
+        transition: 250ms all;
+    }
+    .wrapper section .item:hover {
+        margin: 0 40px;
+        transform: scale(1.2);
+    }
+    .wrapper section a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background-color: rgba(52, 26, 198);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .wrapper section a:nth-of-type(1) {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        rgb(52, 26, 198);
+    }
+    .wrapper section a:nth-of-type(2) {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(90deg, rgba(52, 26, 198);
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display: none;
+        }
+    }
+    {
+        margin:auto;
+        width:1024px;
+        padding:10px;
+        background-color:black;
+        font-size:14px;
+        font-family:Verdana;
+    }
+    h1
+    {
+        float :center;
+        margin : 0 0 10px 35px; /* haut, droite, bas, gauche (respectivement) */
+        color : white;
+        font : 150% georgia, palatino, serif;
+        font-style : italic;
+        font-size: 35px; /* Titres de 22 pixels */
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: #000;
+    }
+
+    h2 {
+        font-family: Arial;
+        color: white;
+        text-align: left;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,100%);
+        overflow:hidden;
+        scroll-behavior: smooth;
+
+    section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+
+    .item {
+        padding: 0 2px;
+        transition: $duration all;
+
+    &:hover {
+         margin: 0 40px;
+         transform: scale(1.2);
+     }
+
+    }
+
+    a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background: rgb(0, 0, 0);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .menu {
+        display: flex;              /* Transformation en flexbox */
+        padding:0;                  /* Suppression des marges internes */
+        background-color: black;     /* Ajout de la couleur d'arrière-plan */
+        justify-content: left     /* Alignements des liens dans le menu */
+    }
+    .menu a:hover {
+        background-color: white;
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+    .menu a {
+        display:block;                /* Transformation en block */
+        min-width: 120px;             /* Largeur minimale des liens */
+
+        margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+        padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+        text-align: center;           /* Centrage du texte */
+        background-color: black;    /* Arrière-plan */
+        color: #fff;                  /* Couleur du texte */
+        text-decoration: none;        /* Suppression du soulignement */
+        border: 1px solid #fff;       /* Ajout d'une bordure */
+        border-radius: 4px;           /* Arrondis des bordures */
+        transition: all 1s ;          /* Ajout des effets de transition */
+    }
+    &:nth-of-type(1) {
+         top:0; bottom:0; left:0;
+         background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+    &:nth-of-type(2) {
+         top:0; bottom:0; right: 0;
+         background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+
+    }
+    }
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display:none;
+        }
+    }     
+</style>
+        <ul class="menu">
+            <li>
+                <a href="Index.html">imscription</a>
+            </li>
+            <li>
+                <a href="métier.html">film</a>
+            </li>
+            <li>
+                <a href="dataviz.html">musique</a>
+            </li>
+            <li>
+                <a href="entreprise_histoire.html">Nouveauté</a>
+            </li>
+            <li>
+                <a href="metier_type.html">datavisualisation</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="loader" class="text-center">
+<br></br>
+<h3> Mission</h3> 
+<br></br>
+ <h5>Machine learning  ingenieur-(H/F)​ ​</h5>
+ <br></br>
+ <P>En tant que Machine Learning Engineer, vous exploitez des données pour</P> 
+ <p>détecter de nouveaux leviers de création de valeur</p> 
+ <P>et aider à la prise de décision pour l’Entreprise, et ce dans le respect </P>
+ <p>de la réglementation en vigueur sur les données :​</p>
+ <P>- Vous comprenez les enjeux du Métier et échangez en permanence avec </P>
+ <p>le Métier afin de vous assurer que le modèle réponde au besoin de l’utilisateur;​</p>
+ <P>- Vous identifiez les besoins du Métier au regard d’une problématique ciblée</P> 
+ <p>et dans divers domaines de la Banque :fraude, marketing (appétence produits,moments de vie, attrition, parcours client…), </p>
+ <p>gestion des risques (octroi de crédit,tarification, probabilité de défaut…),etc.​</p>
+ <P>- En lien avec les Data Scientists de l'équipe, vous développez : les outils </P>
+ <p>nécessaires à la collecte des données dans l’exhaustivité, dans l’historique,</p>
+<P>dans la fréquence et dans la qualité suffisantes, mais également</P>
+<p> les outils nécessaires à la mise en production des algorithmes de machine learning.​</p> 
+</center>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #1409e5;color: white;">
+            <h5 class="modal-title" id="exampleModalLabel3">Hey there!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" style="color: white">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Let's go!</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="item">
+</body>
+</html>  
+

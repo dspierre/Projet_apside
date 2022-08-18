@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The old library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Auto Complete -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+    <!-- External CSS -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <!--    <script type="text/javascript">-->
+    <!--        var films = {{suggestions|tojson}};-->
+    <!--        $(document).ready(function(){-->
+    <!--            $("#myModal").modal('show');-->
+    <!--        });-->
+    </script>
+    <STYLE>
+     .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: rgb(52, 26, 198);
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color: rgb(52, 26, 198);
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);   /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        background-color: rgb(98, 0, 255);
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 100%);
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .wrapper section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+    }
+    .wrapper section .item {
+        padding: 0 2px;
+        transition: 250ms all;
+    }
+    .wrapper section .item:hover {
+        margin: 0 40px;
+        transform: scale(1.2);
+    }
+    .wrapper section a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background-color: rgba(52, 26, 198);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .wrapper section a:nth-of-type(1) {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        rgb(52, 26, 198);
+    }
+    .wrapper section a:nth-of-type(2) {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(90deg, rgba(52, 26, 198);
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display: none;
+        }
+    }
+    {
+        margin:auto;
+        width:1024px;
+        padding:10px;
+        background-color:black;
+        font-size:14px;
+        font-family:Verdana;
+    }
+    h1
+    {
+        float :center;
+        margin : 0 0 10px 35px; /* haut, droite, bas, gauche (respectivement) */
+        color : white;
+        font : 150% georgia, palatino, serif;
+        font-style : italic;
+        font-size: 35px; /* Titres de 22 pixels */
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: #000;
+    }
+
+    h2 {
+        font-family: Arial;
+        color: white;
+        text-align: left;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,100%);
+        overflow:hidden;
+        scroll-behavior: smooth;
+
+    section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+
+    .item {
+        padding: 0 2px;
+        transition: $duration all;
+
+    &:hover {
+         margin: 0 40px;
+         transform: scale(1.2);
+     }
+
+    }
+
+    a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background: rgb(0, 0, 0);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .menu {
+        display: flex;              /* Transformation en flexbox */
+        padding:0;                  /* Suppression des marges internes */
+        background-color: black;     /* Ajout de la couleur d'arrière-plan */
+        justify-content: left     /* Alignements des liens dans le menu */
+    }
+    .menu a:hover {
+        background-color: white;
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+    .menu a {
+        display:block;                /* Transformation en block */
+        min-width: 120px;             /* Largeur minimale des liens */
+
+        margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+        padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+        text-align: center;           /* Centrage du texte */
+        background-color: black;    /* Arrière-plan */
+        color: #fff;                  /* Couleur du texte */
+        text-decoration: none;        /* Suppression du soulignement */
+        border: 1px solid #fff;       /* Ajout d'une bordure */
+        border-radius: 4px;           /* Arrondis des bordures */
+        transition: all 1s ;          /* Ajout des effets de transition */
+    }
+    &:nth-of-type(1) {
+         top:0; bottom:0; left:0;
+         background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+    &:nth-of-type(2) {
+         top:0; bottom:0; right: 0;
+         background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+
+    }
+    }
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display:none;
+        }
+    }   
+</style>
+</head>
+        <ul class="menu">
+            <li>
+                <a href="Index.html">imscription</a>
+            </li>
+            <li>
+                <a href="métier.html">film</a>
+            </li>
+            <li>
+                <a href="dataviz.html">musique</a>
+            </li>
+            <li>
+                <a href="entreprise_histoire.html">Nouveauté</a>
+            </li>
+            <li>
+                <a href="metier_type.html">datavisualisation</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="loader" class="text-center">
+</div>
+<div class="fail">
+</div>
+<h2 id="name" class="text-uppercase"></h2>
+<br></br>
+<h3> Mission</h3> 
+ <h5>Data ingenieur ​</h5>
+ <br></br>
+<p>Expert(e) en statistiques et méthodique, vous excellez dans l’analyse et la résolution de problèmes​</p>
+<P>•Collaboratif(ve) et orienté(e) résultats, vous savez vous organiser pour mener un projet </P>
+<p>à bien et communiquer vos progrès auprès de toutes les parties prenantes​</p>
+<P>•A l’aise avec le Machine Learning et l’analyse prédictive,​</P>
+<p>vous maîtrisez plusieurs langages informatique (Python, Spark R, SAS, etc.) </p> 
+ <P>ainsi que des technologies DataViz, SQL, noSQL, etc​</P>
+<p>Si vous maîtrisez Scala et Hadoop sous Hortonworks, c’est ​un vrai plus !​</p>
+</center>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #0939e5;color: white;">
+            <h5 class="modal-title" id="exampleModalLabel3">Hey there!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" style="color: white">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Let's go!</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="item">
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='recommend.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>  
+</html>

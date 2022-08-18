@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The old library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Auto Complete -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+    <!-- External CSS -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <!--    <script type="text/javascript">-->
+    <!--        var films = {{suggestions|tojson}};-->
+    <!--        $(document).ready(function(){-->
+    <!--            $("#myModal").modal('show');-->
+    <!--        });-->
+    </script>
+    <STYLE>
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: black;     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: black;    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: #000;
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: black;     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color: black;
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: black;    /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+        h2 {
+            font-family: Arial;
+            color: red;
+            text-align: left;
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: black;     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: black;    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: #000;
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: black;     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color: black;
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: black;    /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+        h2 {
+            font-family: Arial;
+            color: red;
+            text-align: left;
+        }
+    .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(40, 23, 231);     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color:rgb(40, 23, 231);    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: rgb(40, 23, 231);
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(40, 23, 231);     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color:rgb(40, 23, 231);
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(40, 23, 231);    /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+        h2 {
+            font-family: Arial;
+            color: rgb(13, 3, 28);
+            text-align: left;
+        }
+</style>
+</head>
+<body id="content" style="font-family: 'Noto Sans JP', sans-serif;">
+<div class="body-content">
+    <div class="ml-container" style="display: block;">
+        </a>
+        <ul class="menu">
+            <li>
+                <a href="Index.html">imscription</a>
+            </li>
+            <li>
+                <a href="métier.html">film</a>
+            </li>
+            <li>
+                <a href="dataviz.html">musique</a>
+            </li>
+            <li>
+                <a href="entreprise_histoire.html">Nouveauté</a>
+            </li>
+            <li>
+                <a href="metier_type.html">datavisualisation</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="loader" class="text-center">
+</div>
+<div class="fail">
+</div>
+<h2 id="name" class="text-uppercase"></h2>
+<h2> Data scientist audit Alternant/e Credit agricole</h2>
+<br></br>
+<h3> Mission</h3> 
+<p>Proposer et concevoir les solutions de modélisation permettant d’adresser toutes les questions </P> 
+<p>de compréhension des comportements de consommateur, tant en terme d’appétence, </p>
+ <P>de motivation, de type de relation au crédit conso, de sensibilité aux offres de crédit, d’attrition.​</P>
+<P>Mettre en œuvre ces solutions de modélisation en lien direct avec la stratégie de développement de</p> 
+<P>CACF (ex : développement de business, optimisation des coûts, développement de la conquête rentable,…)</p>​
+<P>Développer les modèles mathématiques adaptés, en veillant à la qualité de la data​</P>
+<P>Contribuer au développement de l’écosystème du Big Data (Data, traitement, outils, langages,)</P> 
+<P>dans l’optique de conserver une technologie et une expertise de pointe.​</P>
+<p>Assurer la veille technologique autour des techniques de traitement de la Data et de la Data Science​</p>
+<P>Intervenir en tant qu’expert auprès de cercles Data du Groupe Crédit Agricole, CACF dans le cadre</P>
+ <P>d’orientation stratégique de la Data.</P>
+ <P>​Garantir la fiabilité et la pérennité (robustesse et pertinence) </P>
+ <p>des modèles par un ensemble d’éléments de contrôles de cohérence et de performance,</p>
+<P>dans une optique de bonne traçabilité des Data, méthodes, performance des modèles développés.</P>​
+ ​
+</center>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #094fe5;color: white;">
+            <h5 class="modal-title" id="exampleModalLabel3">Hey there!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" style="color: white">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Let's go!</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="item">
+</body> 
+</html>

@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<STYLE>
+    .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+        }
+        .menu li {
+            list-style-type: none ;       /* Suppression des puces */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);    /* Couleur d'arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+        }
+        body {
+            margin: 0;
+            background-color: rgb(52, 26, 198);
+        }
+        .menu {
+            display: flex;              /* Transformation en flexbox */
+            padding:0;                  /* Suppression des marges internes */
+            background-color: rgb(52, 26, 198);     /* Ajout de la couleur d'arrière-plan */
+            justify-content: center     /* Alignements des liens dans le menu */
+        }
+        .menu a:hover {
+            background-color: rgb(52, 26, 198);
+            color: #ffe843;
+            border-color: #ffe843;
+        }
+        .menu a {
+            display:block;                /* Transformation en block */
+            min-width: 120px;             /* Largeur minimale des liens */
+
+            margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+            padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+            text-align: center;           /* Centrage du texte */
+            background-color: rgb(52, 26, 198);   /* Arrière-plan */
+            color: #fff;                  /* Couleur du texte */
+            text-decoration: none;        /* Suppression du soulignement */
+            border: 1px solid #fff;       /* Ajout d'une bordure */
+            border-radius: 4px;           /* Arrondis des bordures */
+            transition: all 1s ;          /* Ajout des effets de transition */
+        }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        background-color: rgb(98, 0, 255);
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 100%);
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .wrapper section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+    }
+    .wrapper section .item {
+        padding: 0 2px;
+        transition: 250ms all;
+    }
+    .wrapper section .item:hover {
+        margin: 0 40px;
+        transform: scale(1.2);
+    }
+    .wrapper section a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background-color: rgba(52, 26, 198);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .wrapper section a:nth-of-type(1) {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        rgb(52, 26, 198);
+    }
+    .wrapper section a:nth-of-type(2) {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(90deg, rgba(52, 26, 198);
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display: none;
+        }
+    }
+    {
+        margin:auto;
+        width:1024px;
+        padding:10px;
+        background-color:black;
+        font-size:14px;
+        font-family:Verdana;
+    }
+    h1
+    {
+        float :center;
+        margin : 0 0 10px 35px; /* haut, droite, bas, gauche (respectivement) */
+        color : white;
+        font : 150% georgia, palatino, serif;
+        font-style : italic;
+        font-size: 35px; /* Titres de 22 pixels */
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: #000;
+    }
+
+    h2 {
+        font-family: Arial;
+        color: white;
+        text-align: left;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,100%);
+        overflow:hidden;
+        scroll-behavior: smooth;
+
+    section {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px 0;
+
+    .item {
+        padding: 0 2px;
+        transition: $duration all;
+
+    &:hover {
+         margin: 0 40px;
+         transform: scale(1.2);
+     }
+
+    }
+
+    a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-size: 6em;
+        background: rgb(0, 0, 0);
+        width: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    .menu {
+        display: flex;              /* Transformation en flexbox */
+        padding:0;                  /* Suppression des marges internes */
+        background-color: black;     /* Ajout de la couleur d'arrière-plan */
+        justify-content: left     /* Alignements des liens dans le menu */
+    }
+    .menu a:hover {
+        background-color: white;
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+    .menu a {
+        display:block;                /* Transformation en block */
+        min-width: 120px;             /* Largeur minimale des liens */
+
+        margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+        padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+        text-align: center;           /* Centrage du texte */
+        background-color: black;    /* Arrière-plan */
+        color: #fff;                  /* Couleur du texte */
+        text-decoration: none;        /* Suppression du soulignement */
+        border: 1px solid #fff;       /* Ajout d'une bordure */
+        border-radius: 4px;           /* Arrondis des bordures */
+        transition: all 1s ;          /* Ajout des effets de transition */
+    }
+    &:nth-of-type(1) {
+         top:0; bottom:0; left:0;
+         background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+    &:nth-of-type(2) {
+         top:0; bottom:0; right: 0;
+         background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+     }
+
+    }
+    }
+    }
+    @media only screen and (max-width: 600px) {
+        a.arrow__btn {
+            display:none;
+        }
+    }
+</style>
+</head>
+        </a>
+            <ul class="menu">
+                <li>
+                    <a href="Index.html">imscription</a>
+                </li>
+                <li>
+                    <a href="metier_data.html">metier data</a>
+                </li>
+                <li>
+                    <a href="Mission.html">Mission_type</a>
+                </li>
+                <li>
+                    <a href="dataviz.html">datavisualisation</a>
+                </li>
+                <li>
+                    <a href="Presentation_big_data.html">Presentation big_data</a>
+                </li>
+            </ul>
+    </div>
+</div>
+<div id="loader" class="text-center">
+</div>
+<div class="fail">
+<h2> Data scientist senior</h2>
+<h5> Mission</h5> 
+<P>Intégrez des solutions d’apprentissage automatique (ML) </P>
+<p>de bout en bout dans des fonctionnalités/suites de produits et/ou des fonctions métier.​</p>
+<P>Recherche sur les tendances de l’industrie telles que le cadre d’apprentissage profond.​</P>
+<P>>Développez une documentation complète sur le processus de développement Machine Learning</P>
+(ML Runbook) et votre propre propriété d’audit ML.​
+Obtenez des recommandations de données et
+ présentez-les aux parties prenantes pour améliorer les KPI métier.​
+Identifiez les opportunités d’automatisation des processus 
+analytiques ou de flux de données et recommandez des expériences de
+ conception pour tout problème / défi spécifique.​
+Guider une équipe d’analystes de données et de scientifiques.​
+</center>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #0947e5;color: white;">
+            
+        </div>
+        <div class="modal-body">
+        </div>
+</div>
+</div>
+<div class="item">
+</body>
+</html>
